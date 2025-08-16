@@ -97,28 +97,98 @@ export default function Home() {
               className="relative"
               variants={itemVariants}
             >
-              <motion.div
-                className="relative rounded-2xl shadow-2xl overflow-hidden animate-float"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                  alt="Futuristic AI neural network visualization"
-                  className="w-full h-auto"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-cyber-purple/30 to-transparent"></div>
+              {/* Futuristic AI Dashboard */}
+              <div className="relative h-96 rounded-2xl overflow-hidden glassmorphism animate-hologram">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyber-purple/40 via-cyber-blue/30 to-cyber-cyan/40"></div>
+                
+                {/* Matrix-style Digital Rain Background */}
+                <div className="absolute inset-0 overflow-hidden opacity-20">
+                  {Array.from({ length: 8 }).map((_, i) => (
+                    <motion.div
+                      key={i}
+                      className="absolute w-0.5 bg-gradient-to-b from-cyber-cyan to-transparent"
+                      style={{
+                        left: `${i * 12.5}%`,
+                        height: '200%',
+                      }}
+                      animate={{ y: ['-100%', '100%'] }}
+                      transition={{
+                        duration: 3 + i,
+                        repeat: Infinity,
+                        ease: 'linear',
+                        delay: i * 0.5,
+                      }}
+                    />
+                  ))}
+                </div>
+
+                {/* Central Command Interface */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <motion.div
+                    className="w-32 h-32 rounded-full bg-gradient-to-r from-cyber-purple to-cyber-cyan flex items-center justify-center animate-neural-pulse"
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+                  >
+                    <Brain className="text-white h-16 w-16" />
+                  </motion.div>
+                </div>
+
+                {/* Floating Data Nodes */}
+                {Array.from({ length: 6 }).map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute glassmorphism p-3 rounded-lg"
+                    style={{
+                      left: `${15 + (i % 3) * 35}%`,
+                      top: `${20 + Math.floor(i / 3) * 60}%`,
+                    }}
+                    animate={{
+                      y: [0, -20, 0],
+                      scale: [1, 1.1, 1],
+                    }}
+                    transition={{
+                      duration: 3 + i * 0.5,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                      delay: i * 0.3,
+                    }}
+                  >
+                    {i % 3 === 0 && <Brain className="text-cyber-cyan h-4 w-4" />}
+                    {i % 3 === 1 && <LinkIcon className="text-cyber-purple h-4 w-4" />}
+                    {i % 3 === 2 && <Shield className="text-cyber-emerald h-4 w-4" />}
+                  </motion.div>
+                ))}
+
+                {/* Status Indicator */}
                 <div className="absolute top-4 right-4 glassmorphism p-4 rounded-lg">
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-3">
                     <motion.div 
-                      className="w-3 h-3 bg-cyber-emerald rounded-full"
-                      animate={{ scale: [1, 1.2, 1] }}
+                      className="w-3 h-3 bg-cyber-emerald rounded-full animate-neural-pulse"
+                      animate={{ scale: [1, 1.5, 1] }}
                       transition={{ repeat: Infinity, duration: 2 }}
                     />
-                    <span className="text-sm">AI Agents Active</span>
+                    <span className="text-sm font-medium">Neural Network Online</span>
                   </div>
                 </div>
-              </motion.div>
+
+                {/* System Status */}
+                <div className="absolute bottom-4 left-4 glassmorphism p-3 rounded-lg">
+                  <div className="text-xs space-y-1">
+                    <div className="flex justify-between">
+                      <span className="text-gray-400">CPU:</span>
+                      <span className="text-cyber-cyan">99.2%</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-400">Memory:</span>
+                      <span className="text-cyber-purple">78.4%</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-400">Network:</span>
+                      <span className="text-cyber-emerald">Active</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
         </div>
@@ -178,46 +248,72 @@ export default function Home() {
               </Link>
             </div>
             
-            <div className="relative">
-              <motion.img
-                src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                alt="Holographic AI interface with connected nodes"
-                className="rounded-2xl shadow-2xl w-full h-auto"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-cyber-purple/40 via-transparent to-cyber-cyan/40 rounded-2xl"></div>
-              
-              {/* Floating UI elements */}
-              <motion.div 
-                className="absolute top-8 left-8 glassmorphism p-3 rounded-lg"
-                animate={{ 
-                  y: [0, -10, 0],
-                }}
-                transition={{ 
-                  repeat: Infinity, 
-                  duration: 3,
-                  ease: "easeInOut" 
-                }}
-              >
-                <Brain className="text-cyber-cyan text-2xl h-6 w-6" />
-              </motion.div>
-              
-              <motion.div 
-                className="absolute bottom-8 right-8 glassmorphism p-3 rounded-lg"
-                animate={{ 
-                  y: [0, -15, 0],
-                }}
-                transition={{ 
-                  repeat: Infinity, 
-                  duration: 4,
-                  ease: "easeInOut",
-                  delay: 1
-                }}
-              >
-                <LinkIcon className="text-cyber-purple text-2xl h-6 w-6" />
-              </motion.div>
-            </div>
+            <motion.div 
+              className="relative"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              {/* Holographic AI Network Visualization */}
+              <div className="relative h-96 rounded-2xl overflow-hidden glassmorphism">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyber-purple/30 via-cyber-blue/20 to-cyber-cyan/30"></div>
+                
+                {/* Animated Network Grid */}
+                <div className="absolute inset-0 opacity-30">
+                  <div className="cyber-grid h-full"></div>
+                </div>
+                
+                {/* Floating Neural Network Nodes */}
+                {Array.from({ length: 12 }).map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute w-4 h-4 bg-cyber-cyan rounded-full shadow-lg"
+                    style={{
+                      left: `${20 + (i % 4) * 20}%`,
+                      top: `${20 + Math.floor(i / 4) * 25}%`,
+                    }}
+                    animate={{
+                      scale: [1, 1.5, 1],
+                      opacity: [0.6, 1, 0.6],
+                    }}
+                    transition={{
+                      duration: 2 + (i * 0.2),
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  />
+                ))}
+                
+                {/* Central AI Core */}
+                <motion.div
+                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                >
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-cyber-purple to-cyber-cyan flex items-center justify-center">
+                    <Brain className="text-white h-10 w-10" />
+                  </div>
+                </motion.div>
+                
+                {/* Floating Tech Icons */}
+                <motion.div 
+                  className="absolute top-8 left-8 glassmorphism p-3 rounded-lg"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+                >
+                  <Brain className="text-cyber-cyan h-6 w-6" />
+                </motion.div>
+                
+                <motion.div 
+                  className="absolute bottom-8 right-8 glassmorphism p-3 rounded-lg"
+                  animate={{ y: [0, -15, 0] }}
+                  transition={{ repeat: Infinity, duration: 4, ease: "easeInOut", delay: 1 }}
+                >
+                  <LinkIcon className="text-cyber-purple h-6 w-6" />
+                </motion.div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>

@@ -7,7 +7,7 @@ export default function ParticleBackground() {
     const container = containerRef.current;
     if (!container) return;
 
-    // Create particles
+    // Create particles with enhanced effects
     const createParticle = () => {
       const particle = document.createElement('div');
       particle.className = 'particle animate-particle';
@@ -15,9 +15,17 @@ export default function ParticleBackground() {
       particle.style.animationDelay = `${Math.random() * 10}s`;
       particle.style.animationDuration = `${8 + Math.random() * 4}s`;
       
-      // Random colors
-      const colors = ['#06B6D4', '#8B5CF6', '#3B82F6', '#10B981', '#F59E0B'];
-      particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+      // Enhanced cyber colors with glow
+      const colors = ['#06B6D4', '#8B5CF6', '#3B82F6', '#10B981', '#F59E0B', '#EC4899'];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      particle.style.background = color;
+      particle.style.boxShadow = `0 0 10px ${color}, 0 0 20px ${color}`;
+      particle.style.borderRadius = '50%';
+      
+      // Random size variations
+      const size = 2 + Math.random() * 4;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
       
       container.appendChild(particle);
 

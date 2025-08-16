@@ -239,17 +239,17 @@ export default function Vision() {
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               {[
                 {
-                  title: "2024 - Foundation",
+                  title: "2025 - Foundation",
                   description: "Launching Finly and establishing core AI agent infrastructure",
                   status: "current"
                 },
                 {
-                  title: "2025 - Expansion",
+                  title: "2026 - Expansion",
                   description: "Releasing Agentic OS and expanding to enterprise solutions",
                   status: "planned"
                 },
                 {
-                  title: "2026+ - Revolution",
+                  title: "2027+ - Revolution",
                   description: "Creating a global ecosystem of AI agents working together",
                   status: "vision"
                 }

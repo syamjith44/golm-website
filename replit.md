@@ -1,6 +1,6 @@
 # Overview
 
-This is a full-stack React application for "golm ai", an AI agent company showcasing their products and vision. The application features a modern cyberpunk-themed design with interactive elements, particle backgrounds, and glassmorphism effects. It's built as a single-page application with multiple pages including home, products, vision, technology, and contact sections. The application allows users to submit contact forms and view information about AI agent products.
+This is a full-stack React application for "golm ai", an AI agent company showcasing their products and vision. The application features a futuristic cyberpunk-themed design with advanced animations, particle backgrounds, holographic effects, and glassmorphism. It's built as a single-page application with multiple pages including home, products, vision, technology, and contact sections. The website emphasizes the company's founding in 2025 and their mission to go beyond generative AI. Users can submit contact forms and explore information about AI agent products like Finly and the upcoming Agentic OS.
 
 # User Preferences
 
