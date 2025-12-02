@@ -122,7 +122,7 @@ export default function Vision() {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <motion.img
-                src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                src="/attached_assets/ai-connected-nodes.png"
                 alt="Holographic AI interface with connected nodes"
                 className="rounded-2xl shadow-2xl w-full h-auto"
                 whileHover={{ scale: 1.02 }}

@@ -114,7 +114,7 @@ export default function Products() {
                   <CardContent className="p-0">
                     <div className="mb-6 relative">
                       <motion.img
-                        src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500"
+                        src="/attached_assets/futuristic-ai-user-interface-design.png"
                         alt="Futuristic desktop environment with holographic elements"
                         className="rounded-xl w-full h-64 object-cover"
                         whileHover={{ scale: 1.02 }}
