@@ -79,7 +79,7 @@ export default function Contact() {
                   {
                     icon: Mail,
                     title: 'Email Us',
-                    content: 'info@golm.in',
+                    content: 'contact@golm.in',
                     description: 'Send us your questions anytime',
                     color: 'cyber-purple'
                   },
