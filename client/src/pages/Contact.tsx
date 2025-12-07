@@ -122,7 +122,7 @@ export default function Contact() {
                   </motion.div>
                 ))}
 
-                {/* Additional Contact Methods */}
+                {/* Additional Contact Methods */} 
                 <motion.div
                   className="space-y-4"
                   initial={{ opacity: 0, y: 20 }}
